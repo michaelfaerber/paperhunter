@@ -1,0 +1,69 @@
+{% extends "papersearchengine/base_generic.html" %}
+{% block navlinks %}
+<ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="/searchengine/phrasesearch">Paper Given Phrase</a>
+	      <span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/titlesearch">Paper Given Paper's Title</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/authorsearch">Paper Given Author</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/citedpapersearch">Citation Contexts Given Cited Paper's Title</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/citedauthorsearch">Citation Contexts Given Cited Paper's Author</a>
+          </li>
+	  <li class="nav-item">
+              <a class="nav-link" href="/searchengine/about">About Us</a>
+          </li>
+      </ul>
+
+{% endblock %}
+{% block content %}
+<div class="container">
+{% if form.errors %}
+      <p style="color: green;"
+         Please correct the error{{ form.errors|pluralize }} below.
+      </p>
+{% endif %}
+
+<div class="container mt-5 pt-5 ">
+
+<div class="row">
+    <div class="col-md-12 lg-12 xl-12 mb-2">
+        <div class="card card-image teal darken-4 text-white text-center">
+                    <h1 class="card-title pt-3 mb-2 font-bold"><strong>Search for papers given textual phrase</strong></h1>
+                    <p class="mx-5 mb-1">
+Given a phrase in the computer science area, this search functionality allows you to search for all arXiv computer science papers which contain this phrase in the body-text.
+<!-- If you want to search for a phrase in the content of all papers, you have come to the right place! Sentences in which 
+		    the word/phrase are found are displayed, along with the paper's metadata (authors, title, publication date, arXiV, and dblp URLs). You can 
+			also choose the number of results to be returned (max 1000). By default, 100 results are returned (if the search returns at least hundred results). <br/>
+      Example searches: &nbsp;'semantic cognition', &nbsp; 'knowledge base completion' &nbsp;and 'stochastic pooling'--></p>
+	</div>
+    </div>
+</div>
+
+<form action="" method="get">
+<div class="form-row">
+	<div class="form-group col-md-8 lg-8 xl-8">
+		{{ form.query }}
+	</div>
+	<div class="form-group col-md-3 lg-3 xl-3">
+	{{ form.numrows }}
+	</div>
+    	<div class="form-group col-md-1 lg-1 xl-1">
+	  <button name="submit" type="submit" class="btn teal darken-4">
+    		<i class="fa fa-search" aria-hidden="true"></i>
+	 </button>
+    	</div>
+</div>
+</form>
+
+<!--container -->
+
+</div>
+{% endblock %}

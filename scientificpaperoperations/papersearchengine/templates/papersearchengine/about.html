@@ -1,0 +1,59 @@
+{% extends "papersearchengine/base_generic.html" %}
+{% block navlinks %}
+<ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/phrasesearch">Paper Given Phrase</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/titlesearch">Paper Given Paper's Title</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/authorsearch">Paper Given Author</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/citedpapersearch">Citation Contexts Given Cited Paper's Title</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/citedauthorsearch">Citation Contexts Given Cited Paper's Author</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="/searchengine/about">About Us</a>
+              <span class="sr-only">(current)</span> 
+          </li>
+      </ul>
+
+{% endblock %}
+{% block content %}
+<div class="container">
+
+<div class="container mt-5 pt-5 ">
+
+<div class="row">
+    <div class="col-md-12 mb-2">
+        <div class="card card-image teal darken-4 text-white text-center">
+                    <h1 class="card-title pt-3 mb-2 font-bold"><strong>About Us</strong></h1>
+                    <h5 class="mx-5 mb-1 text-md-left">This is a research prototype developed by Michael Färber and Ashwath Sampath at the University of Freiburg, Germany.
+<br >
+<strong>Contact:</strong> michael.faerber@cs.uni-freiburg.de <br/> <br/>
+If you use our system, please cite us as follows: </h5>
+<br />
+  <pre class="text-white mx-5 mb-1 text-md-left"><code class="codeblock">@inproceedings{Faerber2019ECIR,
+  author    = {Michael F{\"{a}}rber and
+               Ashwath Sampath and
+               Adam Jatowt},
+  title     = "{PaperHunter: A System for Exploring Papers and Citation Contexts}",
+  booktitle = "{Proceedings of the 41th European Conference on Information Retrieval}",
+  location  = "{Cologne, Germany}",
+  pages     = {},
+  year      = {2019}
+}</code></pre>
+      </div>
+    </div>
+</div>
+
+
+<!--container -->
+
+</div>
+</div>
+{% endblock %}

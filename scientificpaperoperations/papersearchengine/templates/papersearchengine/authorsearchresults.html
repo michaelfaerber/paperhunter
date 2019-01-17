@@ -1,0 +1,88 @@
+{% extends "papersearchengine/base_generic.html" %}
+{% load static %}
+{% block navlinks %}
+<ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/phrasesearch">Paper Given Phrase</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/titlesearch">Paper Given Paper's Title</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="/searchengine/authorsearch">Paper Given Author</a>
+	      <span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/citedpapersearch">Citation Contexts Given Cited Paper's Title</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/citedauthorsearch">Citation Contexts Given Cited Paper's Author</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/about">About Us</a>
+          </li>
+
+      </ul>
+
+{% endblock %}
+
+{% block content %}
+<div class="flex-row">
+    <div class="col-12 pt-3">
+        <div class="card card-image colour1 mb-2 mr-4">
+            <div class="text-white text-center">
+                <div>
+		
+	{% if numresults == 0 %}
+		Sorry, your query <strong> '{{ query }}' </strong> returned no results.
+        {% elif numresults == 1 %}
+            <strong> {{ numresults}} </strong> result{{numresults|pluralize}} was returned for your search query, <strong> {{ query }} </strong>.
+            Displaying <strong> one and only {{ numresults }} </strong> result{{numresults|pluralize}}.
+	{% elif numresults <= numrows %}
+			<strong> {{ numresults}} </strong> result{{numresults|pluralize}} were returned for your search query, <strong> {{ query }} </strong>.
+			Displaying <strong> all {{ numresults }} </strong> result{{numresults|pluralize}}.
+	{% else %}
+			<strong> {{ numresults}} </strong> result{{numresults|pluralize}} were returned for your search query, <strong> {{ query }} </strong>.
+			Displaying the <strong>top {{ numrows }} </strong> result{{numrows|pluralize}} only.
+	{% endif %}
+		<a href="/searchengine/authorsearch" class="btn teal darken-2 btn-md text-white">Search again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<h5>
+
+</h5>
+<div class="card-group">
+	<div class="row mb5 col-12">
+		{% for arxiv_identifier, arxiv_url, authors, dblp_url, published_date, revision_dates, title in results %}
+			<div class="col-12">
+				<div class="card mb-4 mt-3 teal darken-4 resultscard">
+					<div class="card-header #4fc3f7 text-white colour1">
+					<h5 class="card-title"> <a href="{{arxiv_url}}" target="_blank" class="text-white"> <u> {{forloop.counter}}. {{title}} </u> </a> </h5>
+					</div>
+					<!--Card content-->
+					<div class="card-body text-white teal darken-3">
+
+     						<!--Title-->
+   						<h5 class="card-title"> {{authors}} </h4>
+      						<h6> {{published_date}} </h6>
+					</div>
+       					<div class="card-footer text-muted teal darken-4 text-white">
+      						<a href="{{arxiv_url}}" target="_blank">
+      						<img src="{% static 'papersearchengine/img/arxivlogo.png' %}" height="30" title="Visit this paper's page on arXiV." class="float-left" alt="arXiV.org"></a>
+						{% if dblp_url != 'unavailable' %} 
+							<a href="{{dblp_url}}" target="_blank">
+     							<img src="{% static 'papersearchengine/img/dblplogo.png' %}" height="30" title="Visit this paper's page on dblp." class="float-right" alt="dblp"> </a>
+						{% else %}
+     							<img src="{% static 'papersearchengine/img/dblplogo.png' %}" title="No dblp URL found for this result" height="30" class="float-right" alt="dblp"> </a>
+						{% endif %}
+					<div class=text-center>ArXiV and dblp links for {{arxiv_identifier}}</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+ </div>
+
+{% endblock %}

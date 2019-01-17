@@ -1,0 +1,82 @@
+adequately	1
+best-performing	1
+better	1
+closely	1
+considerable	1
+de facto	1
+degrade	-1
+difficult	-1
+effectiveness	1
+good	1
+high	1
+important	1
+improve	1
+lack	-1
+overcome	1
+poor	-1
+power	1
+predominantly	1
+restrict	-1
+satisfactory	1
+straightforward	1
+suitable	1
+infuential	1
+unexplored	-1
+well	1
+worse	-1
+acceptance	1
+accurately	1
+aided	1
+appealing	1
+burden	-1
+central	1
+competitive	1
+complicated	-1
+convenient	1
+daunting	-1
+deficiencies	-1
+dominant	1
+dramatically	1
+easier	1
+easy	1
+effective	1
+efficient	1
+efficiently	1
+excellent	1
+extremely fast	1
+faster	1
+favorably	1
+high-quality	1
+highly correlates	1
+improve the performance	1
+improvements	1
+inability	-1
+inexpensive	1
+intensively	1
+interesting	1
+most important	1
+outperforms	1
+pioneered	1
+popular	1
+preferable	1
+preferred	1
+quite accurate	1
+reasonable	1
+reduces overfitting	1
+robust	1
+shown to	1
+significant increases	1
+simpler	1
+state of the art	1
+state-of-art	1
+state-of-the-art	1
+state-of-theart	1
+substantially	1
+success	1
+successful	1
+successfully	1
+well known	1
+well-founded	1
+well-known	1
+widely known	1
+widely used	1

@@ -1,0 +1,59 @@
+.cssgradienttexture{
+          background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+     }
+
+.navbar{
+	font-family: "Montserrat", sans-serif
+}
+
+.trianglify{
+    background-image: url( "{% static 'papersearchengine/img/trianglifyBuGn.png' %}");
+  }
+
+.lingrad{
+background: rgb(168,228,154);
+background: linear-gradient(90deg, rgba(168,228,154,0.9948354341736695) 4%, rgba(151,231,131,1) 100%);
+}
+
+.card {
+        height: 100%;
+        display: flex;
+}
+
+.resultscard {
+        height: 90%;
+        display: flex;
+}
+
+#id_query {
+        height: 100%;
+        display: flex;
+}
+
+#id_numrows {
+        height: 100%;
+        display: flex;
+}
+
+.textcolour1{
+	color:white;
+	font-size: 0.9rem;
+    	font-weight: 400;
+}
+.colour1 {
+	background-color: #004d40;
+	color: white;
+}
+
+.colour2 {
+	background-color: #e0f2f1;
+	color: white;
+}
+
+.searchresults {
+        width: 100%;
+        display: flex;
+}
+.hideoverflow {
+        overflow: hidden;
+}

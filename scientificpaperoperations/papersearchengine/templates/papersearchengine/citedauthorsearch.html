@@ -1,0 +1,66 @@
+{% extends "papersearchengine/base_generic.html" %}
+{% block navlinks %}
+<ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/phrasesearch">Paper Given Phrase</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/titlesearch">Paper Given Paper's Title</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/authorsearch">Paper Given Author</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/citedpapersearch">Citation Contexts Given Cited Paper's Title</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="/searchengine/citedauthorsearch">Citation Contexts Given Cited Paper's Author</a>
+		<span class="sr-only">(current)</span> 
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/searchengine/about">About Us</a>
+          </li>
+
+      </ul>
+
+{% endblock %}
+{% block content %}
+<div class="container">
+{% if form.errors %}
+      <p style="color: green;"
+         Please correct the error{{ form.errors|pluralize }} below.
+      </p>
+{% endif %}
+
+<div class="container mt-5 pt-5 ">
+
+<div class="row">
+    <div class="col-md-12 mb-2">
+        <div class="card card-image teal darken-4 text-white text-center">
+                    <h1 class="card-title pt-3 mb-2 font-bold"><strong>Search for citation contexts given cited author.</strong></h1>
+                    <p class="mx-5 mb-1">Given this search functionality, users can search for the citation contexts (plus the papers' metadata) in which papers are cited that were written by the given author.<br />
+E.g., searching for "Barbara Liskov" lists all arXiv CS papers citing her.</p>
+	</div>
+    </div>
+</div>
+
+<form action="" method="get">
+<div class="form-row">
+	<div class="form-group col-md-8">
+		{{ form.query }}
+	</div>
+	<div class="form-group col-md-3">
+	{{ form.numrows }}
+	</div>
+    	<div class="form-group col-md-1">
+	  <button name="submit" type="submit" class="btn teal darken-4">
+    		<i class="fa fa-search" aria-hidden="true"></i>
+	 </button>
+    	</div>
+</div>
+</form>
+
+<!--container -->
+
+</div>
+{% endblock %}
