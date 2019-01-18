@@ -10,7 +10,7 @@ The following 5 search types are supported by the system:
 4. __Search for citation contexts given the cited paper’s title.__ Given any paper's title, this search functionality allows to retrieve all sentences from the bodies of arXiv papers in which the specified paper is cited (see Fig. 1). If a publication is cited several times in a paper, then all citation contexts of this paper are grouped together. To allow a quick assessment of the retrieved citation contexts by the user, an icon is presented next to each citation context. This icon indicates the citation context's polarity [5,6] and can be positive (i.e., the cited paper is praised), neutral, or negative. The citation polarity values have been determined offline by using the approach of [7] (trained on the data set of [7]).
 5. __Search for citation contexts given cited paper’s author.__ Here, users can search for the citation contexts (plus the papers' metadata and the links to arXiv.org) in which papers written by the given author are cited. For instance, by searching for "Tim Berners-Lee," our search engine retrieves all contexts in which papers written by Tim Berners-Lee are cited. We also provide the citation polarity indication for this search functionality.
 
-For more information, please have a look on our paper [PaperHunter: A System for Exploring Papers and Citation Contexts](README.md#how-to-cite), published at ECIR 2019.
+For more information, please have a look on our paper [PaperHunter: A System for Exploring Papers and Citation Contexts](README.md#how-to-cite), published at ECIR 2019 (see below).
 
 ## Demo 
 A demo of the system is available online at http://paperhunter.net/.
