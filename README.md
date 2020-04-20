@@ -21,7 +21,7 @@ The system has been designed and implemented by Michael Färber and Ashwath Samp
 [Michael Färber](https://sites.google.com/view/michaelfaerber), michael.faerber@cs&#46;uni-freiburg&#46;de
 
 ## How to Cite
-Please cite our work as follows:
+Please cite our work as follows (see also the [DBLP entry](https://dblp.org/rec/bibtex/conf/ecir/FarberSJ19)):
 ```
 @inproceedings{Faerber2019ECIR,
   author    = {Michael F{\"{a}}rber and
@@ -30,7 +30,7 @@ Please cite our work as follows:
   title     = "{PaperHunter: A System for Exploring Papers and Citation Contexts}",
   booktitle = "{Proceedings of the 41th European Conference on Information Retrieval}",
   location  = "{Cologne, Germany}",
-  pages     = {},
+  pages     = {246--250},
   year      = {2019}
 }
 ```
