@@ -18,7 +18,7 @@ A demo of the system is available online at http://paperhunter.net/.
 ## Contact
 The system has been designed and implemented by Michael Färber and Ashwath Sampath. Feel free to reach out to us:
 
-[Michael Färber](https://sites.google.com/view/michaelfaerber), michael.faerber@cs&#46;kit&#46;edu
+[Michael Färber](https://sites.google.com/view/michaelfaerber), michael.faerber@kit&#46;edu
 
 ## How to Cite
 Please cite our work as follows (see also the [DBLP entry](https://dblp.org/rec/bibtex/conf/ecir/FarberSJ19)):
