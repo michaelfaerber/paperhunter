@@ -10,7 +10,7 @@ The following 5 search types are supported by the system:
 4. __Search for citation contexts given the cited paper's title.__ Given any paper's title, this search functionality allows users to retrieve all sentences from the bodies of arXiv papers in which the specified paper is cited. If a publication is cited several times within a paper, then all citation contexts of this paper are grouped together.To allow a quick assessment of the retrieved citation contexts by the user, an icon is presented next to each citation context. This icon indicates the citation context's polarity and can be positive (i.e., the cited paper is praised), neutral, or negative. The citation polarity values were determined offline by using Athar et al.'s approach and data set for training. 
 5. __Search for citation contexts given the cited paper's author.__ Here, users can search for the citation contexts (plus the papers' metadata and the links to arXiv.org) in which papers written by the given author were cited. For instance, by searching for "Tim Berners-Lee," our search engine retrieves all contexts in which papers written by Tim Berners-Lee have been cited. We also provide the citation polarity indication for this search functionality. 
 
-For more information, please have a look on our paper [PaperHunter: A System for Exploring Papers and Citation Contexts](README.md#how-to-cite), published at [ECIR 2019](http://ecir2019.org/) (see below).
+For more information, please have a look on our paper [PaperHunter: A System for Exploring Papers and Citation Contexts](http://dbis.informatik.uni-freiburg.de/content/team/faerber/papers/PaperHunter_Demo_ECIR2019.pdf), published at [ECIR 2019](http://ecir2019.org/) (see below).
 
 ## Demo 
 A demo of the system is available online at http://paperhunter.net/.
@@ -21,7 +21,7 @@ The system has been designed and implemented by Michael Färber and Ashwath Samp
 [Michael Färber](https://sites.google.com/view/michaelfaerber), michael.faerber@kit&#46;edu
 
 ## How to Cite
-Please cite our work as follows (see also the [DBLP entry](https://dblp.org/rec/bibtex/conf/ecir/FarberSJ19)):
+Please cite our [work](http://dbis.informatik.uni-freiburg.de/content/team/faerber/papers/PaperHunter_Demo_ECIR2019.pdf) as follows (see also the [DBLP entry](https://dblp.org/rec/bibtex/conf/ecir/FarberSJ19)):
 ```
 @inproceedings{Faerber2019ECIR,
   author    = {Michael F{\"{a}}rber and
